@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.justificativoservice.entity.JustificativoEntity;
+import com.example.justificativoservice.model.DatarelojModel;
 import com.example.justificativoservice.repository.JustificativoRepository;
 import com.example.justificativoservice.service.JustificativoService;
 
@@ -46,6 +47,13 @@ public class JustificativoController {
         justificativoService.eliminarInasistencias();
         List<JustificativoEntity> justificativos = justificativoService.listarJustificativos();
         return ResponseEntity.ok(justificativos);
+    }
+
+    @GetMapping("/calcularInasistencias")
+    public ResponseEntity<DatarelojModel[]> getMarcasReloj(){
+        DatarelojModel[] marcasReloj = justificativoService.getMarcasReloj();
+        justificativoService.calcularInasistencias(marcasReloj);
+        return ResponseEntity.ok(marcasReloj);
     }
 
 }
