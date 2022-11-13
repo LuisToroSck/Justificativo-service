@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
+@Table(name= "justificativo")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
