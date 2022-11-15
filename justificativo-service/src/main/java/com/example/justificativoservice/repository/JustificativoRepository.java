@@ -14,7 +14,7 @@ public interface JustificativoRepository extends JpaRepository<JustificativoEnti
 
     @Transactional
     @Modifying
-    @Query(value = "update justificativo_entity j set j.justificada = :just where j.id_justificativo=:id",nativeQuery = true)
+    @Query(value = "update justificativo j set j.justificada = :just where j.id_justificativo=:id",nativeQuery = true)
     public void actualizarJustificativo(@Param("just") int just, @Param("id") Long id);
 
     @Query("select j from JustificativoEntity j where j.idJustificativo=:id ")
