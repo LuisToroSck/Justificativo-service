@@ -33,7 +33,7 @@ public class JustificativoController {
         return ResponseEntity.ok(autorizaciones);
     }
 
-    @PostMapping("/actualizar/{id}")
+    @GetMapping("/actualizar/{id}")
     public ResponseEntity<JustificativoEntity> actualizarJustificativo(@PathVariable Long id){
         JustificativoEntity justificativo = justificativoRepository.getById(id);
         if(justificativo.getJustificada()==0){
