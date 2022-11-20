@@ -1,0 +1,6 @@
+com\example\justificativoservice\JustificativoServiceApplication.class
+com\example\justificativoservice\entity\JustificativoEntity.class
+com\example\justificativoservice\service\JustificativoService.class
+com\example\justificativoservice\controller\JustificativoController.class
+com\example\justificativoservice\repository\JustificativoRepository.class
+com\example\justificativoservice\model\DatarelojModel.class
