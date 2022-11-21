@@ -15,7 +15,8 @@ public class JustificativoService {
     @Autowired
     private JustificativoRepository justificativoRepository;
 
-    RestTemplate restTemplate = new RestTemplate();
+    @Autowired
+    RestTemplate restTemplate;
 
     public List<JustificativoEntity> listarJustificativos(){
         return justificativoRepository.findAll();
@@ -52,7 +53,7 @@ public class JustificativoService {
     }
 
     public DatarelojModel[] getMarcasReloj(){
-        DatarelojModel[] marcasReloj = restTemplate.getForObject("http://localhost:8082/datareloj", DatarelojModel[].class);
+        DatarelojModel[] marcasReloj = restTemplate.getForObject("http://datareloj-service/datareloj", DatarelojModel[].class);
         return marcasReloj;
     }
 }
