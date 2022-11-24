@@ -16,7 +16,7 @@ import com.example.justificativoservice.model.DatarelojModel;
 import com.example.justificativoservice.repository.JustificativoRepository;
 import com.example.justificativoservice.service.JustificativoService;
 
-@CrossOrigin(origins = "http://localhost:3001")
+//@CrossOrigin(origins = "http://localhost:3001")
 @RestController
 @RequestMapping("/justificativo")
 public class JustificativoController {
